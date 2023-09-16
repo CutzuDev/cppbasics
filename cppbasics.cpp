@@ -3,24 +3,23 @@
 
 int main()
 {
-    double a{}, b{}, c{};
+    int age{};
 
-    std::cout << "Enter side A: "
+    std::cout << "Enter your age:"
               << "\n";
-    std::cin >> a;
+    std::cin >> age;
     std::cout << "\n";
 
-    std::cout << "Enter side B: "
-              << "\n";
-    std::cin >> b;
-    std::cout << "\n";
+    if (age <= 18)
+    {
+        std::cout << "You're not allowed in";
+        std::cout << "\n";
+        system("pause");
+        return 0;
+    }
 
-    c = sqrt(pow(a, 2) + pow(b, 2));
-    std::cout << "Result:"
-              << "\n"
-              << c << "\n"
-              << "\n";
+    std::cout << "You're allowed in";
+    std::cout << "\n" << "\n";
     system("pause");
-
     return 0;
 }
