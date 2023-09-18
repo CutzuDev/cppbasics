@@ -3,23 +3,58 @@
 
 int main()
 {
-    int age{};
+    const std::string divider{"----------------------------------------------"};
+    char op{};
+    double num1{};
+    double num2{};
+    double result{};
 
-    std::cout << "Enter your age:"
+    // NEVER EDIT BELOW
+
+    std::cout << "------------------CALCULATOR------------------"
               << "\n";
-    std::cin >> age;
-    std::cout << "\n";
 
-    if (age <= 18)
+    std::cout << "Choose operator (+ - * /):"
+              << "\n";
+    std::cin >> op;
+
+    std::cout << "Enter first number:"
+              << "\n";
+    std::cin >> num1;
+
+    std::cout << "Enter second number:"
+              << "\n";
+    std::cin >> num2;
+
+    switch (op)
     {
-        std::cout << "You're not allowed in";
-        std::cout << "\n";
-        system("pause");
-        return 0;
+    case '+':
+        result = num1 + num2;
+        std::cout << "Result: " << result << "\n";
+        break;
+    case '-':
+        result = num1 - num2;
+        std::cout << "Result: " << result << "\n";
+        break;
+    case '*':
+        result = num1 * num2;
+        std::cout << "Result: " << result << "\n";
+        break;
+    case '/':
+        result = num1 / num2;
+        std::cout << "Result: " << result << "\n";
+        break;
+    default:
+        std::cout << "Your operator sign was invalid"
+                  << "\n";
+        break;
     }
 
-    std::cout << "You're allowed in";
-    std::cout << "\n" << "\n";
+    std::cout << divider << "\n";
+
+    std::cout
+        << "\n"
+        << "\n";
     system("pause");
     return 0;
 }
